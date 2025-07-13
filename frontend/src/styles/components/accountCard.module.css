@@ -1,0 +1,274 @@
+/* Enhanced AccountLinkCard Styles */
+.card {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(148, 163, 184, 0.05);
+  border-radius: var(--radius-2xl, 1rem);
+  padding: var(--spacing-2xl, 2rem);
+  text-align: center;
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06));
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.18s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  will-change: transform, box-shadow;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-analytics, linear-gradient(135deg, #38bdf8 0%, #0ea5e9 35%, #0284c7 100%));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card.linked::before {
+  background: var(--gradient-success, linear-gradient(135deg, #10b981 0%, #059669 100%));
+  opacity: 1;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(14, 165, 233, 0.3);
+  box-shadow: var(--shadow-primary, 0 20px 25px -5px rgba(14, 165, 233, 0.3)), 
+              var(--shadow-glow, 0 0 30px rgba(14, 165, 233, 0.15));
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card.linked:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-success, 0 20px 25px -5px rgba(16, 185, 129, 0.3)), 
+              var(--shadow-success-glow, 0 0 30px rgba(16, 185, 129, 0.15));
+}
+
+.status-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg, 1.5rem);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.18s ease,
+              border-color 0.18s ease;
+  will-change: transform, box-shadow;
+}
+
+.status-icon.linked {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.15);
+}
+
+.card:hover .status-icon {
+  background: var(--gradient-analytics, linear-gradient(135deg, #38bdf8 0%, #0ea5e9 35%, #0284c7 100%));
+  border-color: var(--color-primary, #0ea5e9);
+  box-shadow: var(--shadow-primary, 0 20px 25px -5px rgba(14, 165, 233, 0.3));
+  transform: scale(1.08);
+}
+
+.card:hover .status-icon.linked {
+  background: var(--gradient-success, linear-gradient(135deg, #10b981 0%, #059669 100%));
+  border-color: var(--color-success, #10b981);
+  box-shadow: var(--shadow-success, 0 20px 25px -5px rgba(16, 185, 129, 0.3));
+}
+
+.status-icon i {
+  font-size: 1.25rem;
+  color: var(--color-primary-light, #38bdf8);
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.status-icon.linked i {
+  color: var(--color-success, #10b981);
+}
+
+.card:hover .status-icon i {
+  color: var(--color-white, #ffffff);
+  transform: scale(1.1);
+}
+
+.card h4 {
+  margin-bottom: var(--spacing-md, 1rem);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-white, #ffffff);
+  letter-spacing: -0.01em;
+}
+
+.card .description {
+  color: var(--color-gray-300, #cbd5e1);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-lg, 1.5rem);
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.linked-status {
+  color: var(--color-accent-success, #10b981);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-md, 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm, 0.5rem);
+}
+
+.linked-status::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-accent-success, #10b981);
+  color: var(--color-white, #ffffff);
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.card button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm, 0.5rem);
+  background: var(--gradient-analytics, linear-gradient(135deg, #38bdf8 0%, #0ea5e9 35%, #0284c7 100%));
+  color: var(--color-white, #ffffff);
+  border: none;
+  padding: var(--spacing-lg, 1rem) var(--spacing-xl, 1.5rem);
+  border-radius: var(--radius-xl, 0.75rem);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-primary, 0 20px 25px -5px rgba(14, 165, 233, 0.3));
+  letter-spacing: 0.01em;
+  min-width: 8rem;
+  justify-content: center;
+  will-change: transform, box-shadow;
+}
+
+.card button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary, 0 20px 25px -5px rgba(14, 165, 233, 0.3)), 
+              var(--shadow-glow, 0 0 30px rgba(14, 165, 233, 0.15));
+}
+
+.card button:active {
+  transform: translateY(0);
+}
+
+.card button.unlink {
+  background: rgba(239, 68, 68, 0.8);
+  box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.3);
+}
+
+.card button.unlink:hover {
+  background: rgba(239, 68, 68, 0.9);
+  box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.3), 
+              0 0 30px rgba(239, 68, 68, 0.15);
+}
+
+.card button i {
+  font-size: 0.875rem;
+  transition: transform 0.18s ease;
+}
+
+.card button:hover i {
+  transform: scale(1.1);
+}
+
+/* Provider-specific styling */
+.card.github .status-icon {
+  background: rgba(36, 41, 46, 0.1);
+  border-color: rgba(36, 41, 46, 0.2);
+}
+
+.card.github .status-icon i {
+  color: #f0f6fc;
+}
+
+.card.google .status-icon {
+  background: rgba(66, 133, 244, 0.08);
+  border-color: rgba(66, 133, 244, 0.15);
+}
+
+.card.google .status-icon i {
+  color: #4285f4;
+}
+
+.card.slack .status-icon {
+  background: rgba(74, 21, 75, 0.08);
+  border-color: rgba(74, 21, 75, 0.15);
+}
+
+.card.slack .status-icon i {
+  color: #4a154b;
+}
+
+.card.jira .status-icon {
+  background: rgba(0, 82, 204, 0.08);
+  border-color: rgba(0, 82, 204, 0.15);
+}
+
+.card.jira .status-icon i {
+  color: #0052cc;
+}
+
+/* Animation enhancements */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.card.linked .status-icon {
+  animation: pulse 2s infinite;
+}
+
+.card:hover.linked .status-icon {
+  animation: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card {
+    min-width: 280px;
+    padding: var(--spacing-lg, 1.5rem);
+  }
+  
+  .card h4 {
+    font-size: 1.125rem;
+  }
+  
+  .card button {
+    padding: var(--spacing-md, 0.75rem) var(--spacing-lg, 1.25rem);
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-width: 100%;
+    margin-bottom: var(--spacing-lg, 1.5rem);
+  }
+}
