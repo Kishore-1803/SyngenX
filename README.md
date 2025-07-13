@@ -1,6 +1,6 @@
 # 📊 SyngenX
 
-An AI-powered analytics platform that aggregates and analyzes data from GitHub, Linear, and Zoho Projects to generate comprehensive individual and team performance reports.
+An AI-powered analytics platform that aggregates and analyzes data from GitHub to generate comprehensive individual and team performance reports.
 
 ## 🚀 Features
 
