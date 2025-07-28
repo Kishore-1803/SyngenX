@@ -1,8 +1,12 @@
-![SyngenX Logo](./assets/logo.png) <!-- Replace with actual path or URL -->
+<p align="center">
+  <img src="./assets/logo.png" alt="SyngenX Logo" width="200"/>
+</p>
 
-# SyngenX
+<h1 align="center">SyngenX</h1>
 
-**SyngenX** is an AI-powered analytics platform that aggregates and analyzes data from GitHub to generate comprehensive individual and team performance reports.
+<p align="center">
+  An AI-powered analytics platform that aggregates and analyzes GitHub data to generate comprehensive individual and team performance reports.
+</p>
 
 ## Features
 
