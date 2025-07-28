@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo.png" alt="SyngenX Logo" width="200"/>
+  <img src="frontend/public/SyngenX.png" alt="SyngenX Logo" width="200"/>
 </p>
 
 <h1 align="center">SyngenX</h1>
