@@ -1,28 +1,29 @@
-# 📊 SyngenX
+![SyngenX Logo](./assets/logo.png) <!-- Replace with actual path or URL -->
 
-An AI-powered analytics platform that aggregates and analyzes data from GitHub to generate comprehensive individual and team performance reports.
+# SyngenX
 
-## 🚀 Features
+**SyngenX** is an AI-powered analytics platform that aggregates and analyzes data from GitHub to generate comprehensive individual and team performance reports.
 
-- 🔗 OAuth Integration with GitHub.
-- 📊 Github Info: Commits, Issues, PRs, Repos, Contributions
-- 🧠 AI-Generated Insights using Gemini API
-- 📄 Developer Report: Strengths, Weaknesses, Criticality Handling, Behavioral Analytics
+## Features
 
-## 🛠️ Tech Stack
+- OAuth integration with GitHub.
+- Aggregates GitHub data: commits, issues, pull requests, repositories, contributions.
+- AI-generated insights using the Gemini API.
+- Developer reports including strengths, weaknesses, criticality handling, and behavioral analytics.
 
-| Layer         | Tech                             |
-|---------------|----------------------------------|
-| Frontend      | Next.js (TypeScript + CSS Modules) |
-| Backend       | FastAPI (Python)                 |
-| Database      | Supabase (PostgreSQL)            |
-| AI Engine     | Gemini API (Google AI Studio)    |
-| OAuth Support | GitHub                           |
+## Tech Stack
 
+| Layer         | Technology                         |
+|---------------|-------------------------------------|
+| Frontend      | Next.js (TypeScript, CSS Modules)   |
+| Backend       | FastAPI (Python)                    |
+| Database      | Supabase (PostgreSQL)               |
+| AI Engine     | Gemini API (Google AI Studio)       |
+| OAuth Support | GitHub                              |
 
-## 🧠 AI-Powered Reports Include
+## AI-Powered Reports Include
 
-- 👨‍💻 Productivity, Efficiency, Expertise Scores
-- 📈 Commits, Issues, PRs, Files per Repo
-- ⚡ Criticality & Response Time Patterns
-- 🌐 Language Usage + File Structure Insights
+- Productivity, efficiency, and expertise scores.
+- Detailed metrics on commits, issues, pull requests, and files per repository.
+- Criticality and response time pattern analysis.
+- Programming language usage and file structure insights.
